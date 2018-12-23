@@ -1,5 +1,3 @@
-
-
 function! s:split_path(filename) abort
   return [fnamemodify(a:filename, ':h'), fnamemodify(a:filename, ':t')]
 endfunction
@@ -41,6 +39,10 @@ function! lmake#filter_all_rules(filename) abort
   endwhile
 
   return l:rules
+endfunction
+
+function! lmake#is_lmake_project() abort
+  return s:find_file_from_current_pos('BLADE_ROOT') != ''
 endfunction
 
 function! lmake#get_build_root() abort
