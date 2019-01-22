@@ -1,9 +1,9 @@
 function! coc#source#lmake#init() abort
   return {
         \ 'shortcut': 'lmake',
-        \ 'priority': 1,
+        \ 'priority': 99,
         \ 'filetypes': ['bzl'],
-        \ 'firstMatch': ':'
+        \ 'firstMatch': 1
         \ }
 endfunction
 
